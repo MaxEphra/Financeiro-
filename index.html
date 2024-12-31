@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle Financeiro</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Controle Financeiro</h1>
+    </div>
+
+    <div class="form-container">
+      <input id="desc" type="text" placeholder="Descrição" />
+      <input id="amount" type="number" placeholder="Valor" />
+      <select id="type">
+        <option value="Entrada">Entrada</option>
+        <option value="Saída">Saída</option>
+      </select>
+      <input id="dueDate" type="date" />
+      <button id="btnNew">Incluir</button>
+    </div>
+
+    <div class="box-group">
+      <div class="box incomes">
+        <div class="title">Entradas:</div>
+        <div class="value">R$ 0,00</div>
+      </div>
+      <div class="box expenses">
+        <div class="title">Saídas:</div>
+        <div class="value">R$ 0,00</div>
+      </div>
+      <div class="box total">
+        <div class="title">Total:</div>
+        <div class="value">R$ 0,00</div>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Valor</th>
+          <th>Tipo</th>
+          <th>Vencimento</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
