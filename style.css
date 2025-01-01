@@ -26,6 +26,7 @@ body {
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px;
+  justify-content: flex-start; /* Alinha os itens à esquerda */
 }
 
 .form-container input,
@@ -52,7 +53,7 @@ button#btnNew:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: space-between;
+  justify-content: flex-start; /* Alinha os boxes à esquerda */
 }
 
 .box {
@@ -62,7 +63,7 @@ button#btnNew:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
   flex: 1 1 calc(30% - 10px);
-  text-align: center;
+  text-align: left; /* Textos alinhados à esquerda */
 }
 
 .incomes .value {
@@ -90,13 +91,13 @@ table {
   border-collapse: collapse;
   margin-top: 20px;
   word-wrap: break-word;
+  text-align: left; /* Alinha as informações na tabela à esquerda */
 }
 
 table th,
 table td {
   padding: 10px;
   border: 1px solid #ddd;
-  text-align: center;
 }
 
 thead {
@@ -105,7 +106,7 @@ thead {
 }
 
 tbody tr:nth-child(even) {
-  background-color: #121212;
+  background-color: #1e1e1e;
 }
 
 button i {
@@ -116,6 +117,18 @@ button i {
 
 button i:hover {
   color: #a71d2a;
+}
+
+/* Ícone do calendário */
+input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #ffffff;
+  cursor: pointer;
 }
 
 /* Responsividade para mobile */
