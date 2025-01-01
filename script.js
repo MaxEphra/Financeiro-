@@ -110,7 +110,12 @@ function formatCurrency(value) {
 function formatDate(date) {
   const parsedDate = new Date(date);
   parsedDate.setDate(parsedDate.getDate() + 1); // Corrige o erro do dia anterior
-  return parsedDate.toLocaleDateString("pt-BR");
+
+  const day = String(parsedDate.getDate()).padStart(2, "0");
+  const month = String(parsedDate.getMonth() + 1).padStart(2, "0");
+  const year = String(parsedDate.getFullYear()).slice(-2); // Apenas os dois últimos dígitos
+
+  return `${day}/${month}/${year}`;
 }
 
 function getItensBD() {
@@ -123,6 +128,7 @@ function setItensBD() {
 
 // Carregar os itens ao iniciar a página
 loadItens();
+
 
 
 
