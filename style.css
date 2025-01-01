@@ -97,7 +97,7 @@ table th,
 table td {
   padding: 10px;
   border: 1px solid #ddd;
-  text-align: left; /* Alinha o texto das colunas à esquerda */
+  text-align: left; /* Garantir que o texto está alinhado à esquerda */
 }
 
 thead {
@@ -106,36 +106,17 @@ thead {
 }
 
 tbody tr:nth-child(even) {
-  background-color: #1e1e1e;
+  background-color: #121212;
 }
 
-/* Garantir que os textos das entradas e saídas fiquem alinhados à esquerda */
-table td {
-  text-align: left !important; /* Assegura que a célula está alinhada à esquerda */
-  vertical-align: middle; /* Alinhamento vertical */
-  padding-left: 15px; /* Aumenta o espaço à esquerda para uma melhor apresentação */
-}
-
-/* Estilo para o campo de data com ícone */
-input[type="date"] {
-  appearance: none;
-  -webkit-appearance: none;
-  position: relative;
-  padding-right: 35px; /* Espaço para o ícone do lado direito */
-  background-color: #1e1e1e;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  color: #ffffff;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-  position: absolute;
-  right: 10px; /* Ícone do calendário no lado direito */
+button i {
+  color: green;
+  font-size: 1.2em;
   cursor: pointer;
-  height: 100%;
-  width: 20px;
-  background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23FFF" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM5 19V8h14v11H5zm5-9h4v2h-4v-2z"/></svg>') no-repeat;
-  background-size: contain;
+}
+
+button i:hover {
+  color: #a71d2a;
 }
 
 /* Responsividade para mobile */
@@ -176,10 +157,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   table td {
     display: flex;
     flex: 1 1 50%; /* Colunas lado a lado */
-    justify-content: space-between;
+    justify-content: flex-start; /* Alinha os itens à esquerda */
     padding: 5px;
     align-items: center;
-    text-align: left !important; /* As informações ficam alinhadas à esquerda */
   }
 
   table td:before {
@@ -187,6 +167,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-weight: bold;
     margin-right: 10px;
   }
+}
+
+/* Estilo para o campo de data com ícone */
+input[type="date"] {
+  position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 10px; /* Coloca o ícone do calendário no lado direito */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  filter: invert(1); /* Ajusta o ícone para contraste em fundo escuro */
 }
 
 
